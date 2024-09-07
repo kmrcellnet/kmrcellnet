@@ -9,7 +9,7 @@ body {
 
 .header-animation {
     background-color: #375;
-    color: #fff;
+    color: #000;
     padding: 10px 0;
     text-align: center;
     animation: slideDown 1s ease-out;
