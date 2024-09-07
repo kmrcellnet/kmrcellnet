@@ -18,6 +18,40 @@
             padding: 15px;
             text-align: center;
         }
+        nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+.link-animation {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.1s ease;
+}
+
+.link-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
         
         .promo-container {
             display: flex;
@@ -92,6 +126,18 @@
     <div class="header">
         <h1>Promo Kuota Internet Terbaik</h1>
         <p>Jangan lewatkan promo menarik untuk paket internet harian, mingguan, dan bulanan!</p>
+    <nav>
+            <ul>
+                <li><a href="index.html" class="link-animation">Home</a></li>
+                <li><a href="xl.html" class="link-animation">XL</a></li>
+                <li><a href="axis.html" class="link-animation">AXIS</a></li>
+                <li><a href="3.html" class="link-animation">TRI</a></li>
+                <li><a href="ewallet.html" class="link-animation">E wallet</a></li>
+                
+                <li><a href="promo.html" class="link-animation">Promo</a></li>
+                
+            </ul>
+    </nav>
     </div>
 
     <div class="promo-container">
