@@ -62,6 +62,16 @@ nav ul li {
     transform-origin: bottom left;
 }
 
+sec ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+sec  li {
+    display: inline;
+    margin-right: 10px;
+}
+
 main {
     padding: 20px;
 }
