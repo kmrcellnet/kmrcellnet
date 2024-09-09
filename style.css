@@ -65,31 +65,6 @@ nav ul li {
 main {
     padding: 20px;
 }
-.link-animation {
-    color: white;
-    text-decoration: none;
-    position: relative;
-    display: inline-block;
-    transition: color 0.1s ease;
-}
-
-.link-animation::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.link-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-    }
 
 footer {
     background-color: #333;
