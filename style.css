@@ -24,17 +24,46 @@ body {
         transform: translateY(0);
         opacity: 1;
     }
+/* Style dasar untuk nav */
+nav {
+  background-color: #333;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  background-color: #333;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.nav-list li {
+  margin: 0;
 }
+
+.nav-list a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list a:hover {
+  background-color: #575757;
+}
+
+/* Untuk layar yang lebih kecil */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-list li {
+    width: 100%;
+  }
+    }
 
 .link-animation {
     color: white;
