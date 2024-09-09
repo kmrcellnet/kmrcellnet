@@ -10,7 +10,7 @@ body {
 .header-animation {
     background-color: #375;
     color: #fff;
-    padding: 20px 0;
+    padding: 10% 0;
     text-align: center;
     animation: slideDown 1s ease-out;
 }
@@ -49,7 +49,7 @@ nav ul li {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 2%;
     bottom: 0;
     left: 0;
     background-color: #fff;
