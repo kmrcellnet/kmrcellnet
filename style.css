@@ -62,12 +62,12 @@ nav ul li {
     transform-origin: bottom left;
 }
 
-sec ul {
+section li {
     list-style-type: none;
     padding: 0;
 }
 
-sec  li {
+section  li {
     display: inline;
     margin-right: 10px;
 }
