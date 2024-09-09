@@ -10,14 +10,9 @@ body {
 .header-animation {
     background-color: #375;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     animation: slideDown 1s ease-out;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
 }
 
 @keyframes slideDown {
