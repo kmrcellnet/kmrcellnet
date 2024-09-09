@@ -1,36 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #00ff00;
-    color: #000000;
-    
-}
-
-.header-animation {
-    background-color: #375;
-    color: #fff;
-    padding: 10% 0;
-    text-align: center;
-    animation: slideDown 1s ease-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-/* Reset style dasar */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Style untuk nav */
 nav {
   background-color: #333;
@@ -108,16 +75,3 @@ nav {
   }
     }
 
-main {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
