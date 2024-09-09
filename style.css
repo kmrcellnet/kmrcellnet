@@ -1,3 +1,10 @@
+/* Reset style dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Style untuk nav */
 nav {
   background-color: #333;
@@ -73,5 +80,4 @@ nav {
     padding: 15px;
     font-size: 18px;
   }
-    }
-
+}
