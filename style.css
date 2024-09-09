@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav ul li {
-    display: flex;
+    display: inline;
     margin-right: 10px;
 }
 
