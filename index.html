@@ -11,17 +11,24 @@
     <header class="header-animation">
         <h1>JUAL PAKET DATA DAN PULSA</h1>
         <p>kmrcell-Tanjungpura</p>
-        <nav>
-           <ul class="nav-list">
-               
-             <li><a href="index.html">Home</a></li>
-             <li><a href="axis.html">Axis</a></li>
-             <li><a href="3.html">Tri</a></li>
-             <li><a href="ewallet.html">Ewallet</a></li>
-             
-           </ul>
-     </nav>
+        
+<nav>
+  <div class="logo">MyWebsite</div>
+  <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+  <ul class="nav-list">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
+<script>
+  function toggleMenu() {
+    var navList = document.querySelector(".nav-list");
+    navList.classList.toggle("active");
+  }
+</script>
     </header>
     <main>
         <section>
