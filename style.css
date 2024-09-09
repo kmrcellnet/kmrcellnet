@@ -81,3 +81,74 @@ nav {
     font-size: 18px;
   }
 }
+
+
+/* Style untuk footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.footer-info, .footer-links, .footer-social {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-info p, .footer-links ul, .footer-social a {
+  font-size: 16px;
+}
+
+.footer-info a, .footer-links a, .footer-social a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.footer-info a:hover, .footer-links a:hover, .footer-social a:hover {
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style-type: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffcc00;
+}
+
+.footer-social .social-icon:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #222;
+  font-size: 14px;
+    }
+
