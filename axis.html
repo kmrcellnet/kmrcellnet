@@ -44,21 +44,6 @@
             margin: 20px 0;
         }
 
-        @media (max-width: 600px) {
-            .scrollable {
-                max-height: 300px; /* Tinggi lebih kecil untuk layar kecil */
-            }
-            .paket {
-                padding: 15px;
-            }
-        }
-
-        @media (min-width: 601px) and (max-width: 900px) {
-            .paket {
-                padding: 18px;
-            }
-        }
-
         button {
             background: #28a745;
             color: white;
@@ -67,10 +52,21 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.3s;
+            width: 100%; /* Tombol penuh lebar di perangkat mobile */
         }
 
         button:hover {
             background: #218838;
+        }
+
+        /* Responsif untuk perangkat mobile */
+        @media (max-width: 600px) {
+            .scrollable {
+                max-height: 300px; /* Tinggi lebih kecil untuk layar kecil */
+            }
+            .paket {
+                padding: 15px;
+            }
         }
     </style>
 </head>
