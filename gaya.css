@@ -1,0 +1,95 @@
+*,html,body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+header {
+  background: navy;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  
+}
+.logo {
+  margin-right: auto;
+  margin-left: 10px;
+  padding: 25px;
+  transition: all 0.5s ease 0s;
+}
+.logo:hover {
+  color: red;
+  transform: rotate(2deg);
+}
+.tombol {
+  border: none;
+  margin-right: 10px;
+  font-size: 40px;
+  padding: 6px 12px;
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+  padding: 25px;
+}
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+li a {
+  transition: all 0.5s ease 0s;
+  display: inline-block
+}
+li a:hover {
+  color: red;
+  transform: rotate(2deg);
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+.container {
+  max-width: 1200px;
+  padding: 70px 0px;
+  background-color: lightblue
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.isi {
+  font-size: 40px;
+  font-weight: bolder;
+}
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer a {
+  color: red;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+footer a:hover {
+  color: yellow;
+}
+
+footer p {
+  margin: 5px 0;
+}
