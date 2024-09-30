@@ -3,7 +3,7 @@ html,
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "silkscreen", sans-serif;
+  font-family: "Hekvetica";
 
 }
 :root {
@@ -102,6 +102,11 @@ img {
 .tombol {
   margin-top: 16px;
   padding: 8px;
+  box-shadow: 4px 2px;
+  background-color: greenyellow;
+}
+.tombol:hover {
+  background-color: red;
 }
 a:hover {
   -ms-transform: rotate(10deg);
