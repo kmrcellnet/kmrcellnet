@@ -130,3 +130,82 @@ button:hover {
     width: 90%;
   }
 }
+/* ======= MOBILE RESPONSIVE ======= */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .about img {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* ======= EXTRA SMALL MOBILE (HP KECIL) ======= */
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .about img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .project-cards {
+    gap: 10px;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
