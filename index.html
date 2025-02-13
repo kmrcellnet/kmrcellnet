@@ -163,4 +163,110 @@
       }
 
       .container {
-        width:
+        width: 90%;
+      }
+
+      .project-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .about img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .about img {
+        width: 80px;
+        height: 80px;
+      }
+
+      footer {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="logo">Nkmrx_18</h1>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#about">Tentang Saya</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <img src="ptk.webp" alt="Foto Profil"/>
+      <p>Saya adalah pengembang web yang berfokus pada pembuatan aplikasi web responsif dan interaktif.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Proyek Saya</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 1">
+          <h3>Proyek 1</h3>
+          <p>Deskripsi singkat proyek 1.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 2">
+          <h3>Proyek 2</h3>
+          <p>Deskripsi singkat proyek 2.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 3">
+          <h3>Proyek 3</h3>
+          <p>Deskripsi singkat proyek 3.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Kontak Saya</h2>
+      <p>Hubungi saya melalui:</p>
+      <ul>
+        <li>Email: <a href="mailto:Bangkomar232@gmail.com">Bangkomar232@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/kmrcellnet" target="_blank">github.com/kmrcellnet</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Portofolio Saya | Semua Hak Dilindungi</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.querySelector("nav ul");
+      navMenu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
