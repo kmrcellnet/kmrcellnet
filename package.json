@@ -1,21 +1,19 @@
 {
-  "name": "zyka-node",
+  "name": "my-express-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Express app for Vercel",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
-    
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "nodemon": "^3.1.4",
+    "express": "^4.18.2",
     "serve-index": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
   }
 }
