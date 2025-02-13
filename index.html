@@ -4,202 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>nkmrx Portofolio</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Global Styles */
-    body {
-      font-family: 'Space Mono', monospace;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background-color: #333;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header .logo {
-      font-size: 1.5rem;
-    }
-
-    /* Navbar */
-    .nav-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin-left: 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* Section Styles */
-    section {
-      padding: 50px 5%;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .about img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-top: 20px;
-      border: 4px solid #333;
-    }
-
-    .project-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      max-width: 300px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* Contact Section */
-    .contact ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .contact ul li {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-
-    .contact a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-
-      nav ul li {
-        margin: 10px 0;
-        text-align: center;
-      }
-
-      nav ul.show {
-        display: flex;
-      }
-
-      .container {
-        width: 90%;
-      }
-
-      .project-cards {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .card {
-        width: 90%;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-      }
-
-      .about img {
-        width: 100px;
-        height: 100px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      .about img {
-        width: 80px;
-        height: 80px;
-      }
-
-      footer {
-        padding: 10px;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -218,8 +26,8 @@
   <section id="about" class="about">
     <div class="container">
       <h2>Tentang Saya</h2>
-      <img src="ptk.webp" alt="Foto Profil"/>
-      <p>Saya adalah pengembang web yang berfokus pada pembuatan aplikasi web responsif dan interaktif.</p>
+      <img src="images/profile.jpg" alt="Foto Profil"/>
+      <p>Saya seorang pengembang web yang berfokus pada pembuatan aplikasi web responsif dan interaktif.</p>
     </div>
   </section>
 
@@ -227,21 +35,31 @@
     <div class="container">
       <h2>Proyek Saya</h2>
       <div class="project-cards">
+
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 1">
           <h3>Proyek 1</h3>
-          <p>Deskripsi singkat proyek 1.</p>
+          <p>Aplikasi To-Do List berbasis JavaScript.</p>
+          <a href="https://github.com/kmrcellnet/proyek1" target="_blank">
+            <button>Lihat Kode</button>
+          </a>
         </div>
+
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 2">
           <h3>Proyek 2</h3>
-          <p>Deskripsi singkat proyek 2.</p>
+          <p>Website Portfolio menggunakan React.js.</p>
+          <a href="https://github.com/kmrcellnet/proyek2" target="_blank">
+            <button>Lihat Kode</button>
+          </a>
         </div>
+
         <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 3">
           <h3>Proyek 3</h3>
-          <p>Deskripsi singkat proyek 3.</p>
+          <p>Dashboard Admin dengan Bootstrap.</p>
+          <a href="https://github.com/kmrcellnet/proyek3" target="_blank">
+            <button>Lihat Kode</button>
+          </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -252,7 +70,9 @@
       <p>Hubungi saya melalui:</p>
       <ul>
         <li>Email: <a href="mailto:Bangkomar232@gmail.com">Bangkomar232@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/kmrcellnet" target="_blank">github.com/kmrcellnet</a></li>
+        <li>GitHub: <a href="https://github.com/kmrcellnet" target="_blank">
+          <img src="images/github-icon.png" width="20"> GitHub Saya
+        </a></li>
       </ul>
     </div>
   </section>
@@ -261,12 +81,7 @@
     <p>&copy; 2025 Portofolio Saya | Semua Hak Dilindungi</p>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const navMenu = document.querySelector("nav ul");
-      navMenu.classList.toggle("show");
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 </html>
