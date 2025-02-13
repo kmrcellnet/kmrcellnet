@@ -1,0 +1,478 @@
+:root {
+    --dasar: #f2c253ac;
+    ---bg: #121212;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(-45deg, #0a0a0a, #0c0c0c, #000002, var(---bg));
+    background-size: 1000% 1000%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    100% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+.container {
+    min-height: 95vh;
+    color: white;
+}
+
+.sampul {
+    background-image: url("/img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 25vh;
+}
+
+.profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-top: -60px;
+}
+
+.profil img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: solid 1px #1d1d1dbe;
+}
+
+.profil h1 {
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deskripsi {
+    color: gray;
+    font-size: 14px;
+}
+
+.div-tengah {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoby1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.hoby2 {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ini-hoby {
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: solid 2px var(--dasar);
+    margin: 0 2px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.ini-hoby:hover {
+    opacity: 80%;
+}
+
+.ini-hoby p {
+    white-space: nowrap;
+    text-align: center;
+    font-size: 12px;
+}
+
+.sosial {
+    padding: 10px 0;
+}
+
+.sosial a {
+    margin: 0 3px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sosial a:hover {
+    opacity: 50%;
+}
+
+.link {
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+.item-link {
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #161616;
+    width: 90%;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.item-link:hover {
+    opacity: 60%;
+    box-shadow: 0 0px 0px rgba(255, 255, 255, 0.1);
+}
+
+.item-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.item-name span {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.item-name p {
+    color: #ffffffc4;
+    padding-left: 10px;
+}
+
+.icon-panah {
+    margin: auto 0;
+    padding-right: 10px;
+}
+
+.spotify {
+    text-align: center;
+    color: #ffffffa6;
+    flex-direction: column;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    color: var(--dasar);
+    padding: 10px 0;
+    font-size: 12px;
+}
+
+/* modal */
+#modal,
+#modalMessage {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(2px);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #222222;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid var(---bg);
+    width: 90%;
+    border-radius: 10px;
+    max-height: 80vh;
+}
+
+.modal-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-title p {
+    font-weight: bold;
+    color: white;
+    font-size: 1.3em;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-container {
+    margin-top: 20px;
+}
+
+.modal-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: #333333;
+}
+
+#search {
+    width: 100%;
+    padding: 8px 16px;
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+    padding: 10px 20px;
+}
+
+.modal-search span {
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+.modal-item-container,
+.modal-container-message {
+    max-height: 45vh;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.modal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    border-radius: 10px;
+    margin: 8px 0;
+    padding: 5px 10px;
+    transition: all 0.3s;
+}
+
+.modal-item:hover {
+    background-color: #444444;
+}
+
+.modal-item-left {
+    display: flex;
+    align-items: center;
+}
+
+.modal-item-left-icon {
+    margin-right: 15px;
+}
+
+.modal-item-left-meta {
+    color: white;
+    padding: 5px 0px;
+}
+
+.modal-item-left-meta-title {
+    font-size: 0.8em;
+}
+
+.modal-item-left-meta-date {
+    font-size: 0.6em;
+    opacity: 50%;
+}
+
+.modal-item-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-item-right a {
+    margin: 0px 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal-item-right a:hover {
+    opacity: 50%;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal-container-message {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#message {
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #33333391;
+    color: white;
+    width: 100%;
+    height: 20vh;
+    resize: none;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 4px 0px 0px rgba(0, 0, 0, 0.055);
+    font-size: 1.05em;
+}
+
+.btn-send {
+    background-color: var(--dasar);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-weight: 600;
+}
+
+.btn-send:hover {
+    opacity: 50%;
+}
+
+.btn-disabled {
+    opacity: 70%;
+    background-color: gray;
+    cursor: wait;
+}
+
+#spotify {
+    margin-top: 15px;
+    max-width: 80%;
+    min-width: 50%;
+}
+
+.spotify-content {
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 2px rgba(255, 255, 255, 0.1);
+    padding-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.spotify-content:hover {
+    background-color: #222222;
+    box-shadow: 2px 4px rgba(255, 255, 255, 0.1);
+}
+.album-image {
+    margin-right: 10px;
+    height: full;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.album-image img {
+    width: auto;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.music-info {
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 0px;
+    width: 100%;
+}
+.music-info h4 {
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+.music-info p {
+    font-size: 9px;
+    padding: 0;
+    margin: 0;
+}
+
+.title-of-link {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    opacity: 60%;
+    transition: all 0.3s ease-in-out;
+}
+
+.title-of-link:hover {
+    opacity: 90%;
+}
+
+.music-artist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-artist p {
+    margin-right: 5bpx;
+}
+
+.wm-spotify {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 8px;
+}
+
+/* responsive untuk desktop */
+@media screen and (min-width: 768px) {
+    .item-link {
+        width: 50%;
+    }
+
+    .sampul {
+        height: 35vh;
+    }
+    .modal-content {
+        width: 40%;
+    }
+
+    #spotify {
+        min-width: 20%;
+    }
+}
