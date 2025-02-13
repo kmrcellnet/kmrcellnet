@@ -2,156 +2,201 @@
 <html lang="id">
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Paket Promo dan Layanan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-  <stlye>
-
-
+  <style>
     /* Global Styles */
-body {
-  font-family: 'Silkscreen', sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
+    body {
+      font-family: 'Silkscreen', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
 
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header nav ul li {
-  margin: 0 15px;
-}
+    header .logo {
+      font-size: 24px;
+    }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
+    header nav ul li {
+      margin-left: 20px;
+    }
 
-button:hover {
-  background-color: #45a049;
-}
+    header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
 
-.container {
-  padding: 20px;
-}
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+    section {
+      padding: 50px 0;
+    }
 
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 30%;
-  margin: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
 
-.card:hover {
-  transform: scale(1.05);
-}
+    h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
+    .about p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
 
-.card .title {
-  font-size: 1.5rem;
-  margin: 15px 0;
-}
+    .project-cards {
+      display: flex;
+      gap: 30px;
+    }
 
-.card .description {
-  color: #777;
-  margin-bottom: 20px;
-}
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      text-align: center;
+      padding: 20px;
+    }
 
-@media screen and (max-width: 768px) {
-  .card {
-    width: 48%;
-  }
-}
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-@media screen and (max-width: 480px) {
-  .card {
-    width: 100%;
-  }
-}
+    .card h3 {
+      margin-top: 15px;
+      font-size: 1.5rem;
+    }
 
-  </stlye>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    .card p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    .contact ul li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1 class="logo">LOGO</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="paket.html">Paket</a></li>
-        <li><a href="token.html">Token</a></li>
-      </ul>
-    </nav>
-    <button class="button">Follow</button>
+    <div class="container">
+      <h1 class="logo">Portofolio Saya</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Tentang Saya</a></li>
+          <li><a href="#projects">Proyek</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="wrapper">
-      <!-- Kartu Produk -->
-      <div class="card text-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Axis_logo_2015.svg/800px-Axis_logo_2015.svg.png" alt="Paket Promo"/>
-        <h1 class="title">Paket Promo</h1>
-        <p class="description">Terbatas!!</p>
-        <button class="tombol" onclick="window.open('https://wa.me/62895401353937')">
-          Kirim Pesan di WhatsApp
-        </button>
-      </div>
-
-      <!-- Tambahkan Kartu Lainnya -->
-      <div class="card text-center">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Axis_logo_2015.svg/800px-Axis_logo_2015.svg.png" alt="Pulsa"/>
-        <h1 class="title">Pulsa</h1>
-        <p class="description">Ready stock</p>   
-        <button class="tombol" onclick="window.open('https://wa.me/62895401353937')">
-          Kirim Pesan di WhatsApp
-        </button>
-      </div>
-      
-      <!-- Lanjutkan dengan kartu lainnya seperti contoh di atas -->
-      <!-- Tambahkan lebih banyak kartu sesuai kebutuhan -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <p>Saya adalah seorang pengembang web dengan pengalaman dalam membangun aplikasi web responsif menggunakan HTML, CSS, JavaScript, dan teknologi lainnya. Saya suka tantangan dan selalu berusaha untuk terus belajar dan berkembang dalam dunia pemrograman.</p>
     </div>
-  </div>
+  </section>
 
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Proyek Saya</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 1">
+          <h3>Proyek 1</h3>
+          <p>Deskripsi singkat proyek 1. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 2">
+          <h3>Proyek 2</h3>
+          <p>Deskripsi singkat proyek 2. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Proyek 3">
+          <h3>Proyek 3</h3>
+          <p>Deskripsi singkat proyek 3. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Kontak Saya</h2>
+      <p>Jika Anda tertarik bekerja sama atau ingin mendiskusikan proyek, jangan ragu untuk menghubungi saya melalui email atau media sosial berikut:</p>
+      <ul>
+        <li>Email: <a href="mailto:email@contoh.com">email@contoh.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/username</a></li>
+        <li>GitHub: <a href="https://github.com" target="_blank">github.com/username</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Portofolio Saya | Semua Hak Dilindungi</p>
+  </footer>
 </body>
 </html>
