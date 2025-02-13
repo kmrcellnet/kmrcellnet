@@ -27,6 +27,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     header .logo {
@@ -87,6 +88,8 @@
     .project-cards {
       display: flex;
       gap: 30px;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     .card {
@@ -145,6 +148,67 @@
       position: fixed;
       width: 100%;
       bottom: 0;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media screen and (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      header nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+      }
+
+      header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      .container {
+        width: 90%;
+      }
+
+      .project-cards {
+        flex-direction: column;
+      }
+
+      .card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .about .profile img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        width: 100%;
+      }
+
+      .about .profile img {
+        width: 100px;
+        height: 100px;
+      }
+
+      footer {
+        padding: 15px;
+      }
     }
   </style>
 </head>
