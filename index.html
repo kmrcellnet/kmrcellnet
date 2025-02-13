@@ -3,21 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website kmr</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            color: #333;
-        }
-    </style>
+    <title>File Upload</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Selamat Datang di Website Vercel!</h1>
-    <p>Ini adalah halaman sederhana yang di-host di Vercel.</p>
+    <header>
+        <h1>Website Upload File</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Unggah File</h2>
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <label for="fileUpload">Pilih file untuk diunggah:</label>
+                <input type="file" name="file" id="fileUpload" required>
+                <button type="submit" name="submit">Unggah</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Daftar File yang Tersedia</h2>
+            <ul id="fileList">
+                <!-- Daftar file akan ditampilkan di sini -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Upload File</p>
+    </footer>
 </body>
 </html>
