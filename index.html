@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>nkmrx portofolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>nkmrx Portofolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
@@ -20,65 +19,67 @@
     header {
       background-color: #333;
       color: white;
-      padding: 20px;
-    }
-
-    header .container {
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header .logo {
-      font-size: 24px;
+      font-size: 1.5rem;
     }
 
-    header nav ul {
+    /* Navbar */
+    .nav-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
     }
 
-    header nav ul li {
+    nav ul li {
       margin-left: 20px;
     }
 
-    header nav ul li a {
+    nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 1rem;
     }
 
-    header nav ul li a:hover {
+    nav ul li a:hover {
       text-decoration: underline;
     }
 
+    /* Section Styles */
     section {
-      padding: 50px 0;
+      padding: 50px 5%;
     }
 
     .container {
-      width: 80%;
+      max-width: 1000px;
       margin: 0 auto;
+      text-align: center;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #333;
       margin-bottom: 20px;
     }
 
-    .about p, .contact p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .about .profile img {
-      width: 150px;
-      height: 150px;
+    .about img {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-top: 20px;
@@ -87,16 +88,17 @@
 
     .project-cards {
       display: flex;
-      gap: 30px;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 20px;
     }
 
     .card {
       background-color: white;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 30%;
+      width: 100%;
+      max-width: 300px;
       text-align: center;
       padding: 20px;
     }
@@ -106,28 +108,14 @@
       border-radius: 10px;
     }
 
-    .card h3 {
-      margin-top: 15px;
-      font-size: 1.5rem;
-    }
-
-    .card p {
-      font-size: 1rem;
-      color: #777;
-    }
-
-    .card:hover {
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
+    /* Contact Section */
     .contact ul {
       list-style: none;
       padding: 0;
-      margin-top: 20px;
     }
 
     .contact ul li {
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 10px;
     }
 
@@ -140,139 +128,39 @@
       text-decoration: underline;
     }
 
+    /* Footer */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 15px;
     }
 
-    /* Media Queries for Responsiveness */
+    /* Responsive Design */
     @media screen and (max-width: 768px) {
-      header .container {
+      header {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      header nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        margin-top: 10px;
+      .nav-toggle {
+        display: block;
       }
 
-      header nav ul li {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
         margin: 10px 0;
         text-align: center;
       }
 
+      nav ul.show {
+        display: flex;
+      }
+
       .container {
-        width: 90%;
-      }
-
-      .project-cards {
-        flex-direction: column;
-      }
-
-      .card {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      .about .profile img {
-        width: 120px;
-        height: 120px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      h2 {
-        font-size: 1.8rem;
-      }
-
-      .card {
-        width: 100%;
-      }
-
-      .about .profile img {
-        width: 100px;
-        height: 100px;
-      }
-
-      footer {
-        padding: 15px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">Nkmrx_18</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">Tentang Saya</a></li>
-          <li><a href="#projects">Proyek</a></li>
-          <li><a href="#contact">Kontak</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Tentang Saya</h2>
-      <div class="profile">
-        <img src="ptk.webp" alt="Foto Profil"/>
-      </div>
-      <p>Saya adalah seorang pengembang web dengan pengalaman dalam membangun aplikasi web responsif menggunakan HTML, CSS, JavaScript, dan teknologi lainnya. Saya suka tantangan dan selalu berusaha untuk terus belajar dan berkembang dalam dunia pemrograman.</p>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2>Proyek Saya</h2>
-      <div class="project-cards">
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 1">
-          <h3>Proyek 1</h3>
-          <p>Deskripsi singkat proyek 1. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 2">
-          <h3>Proyek 2</h3>
-          <p>Deskripsi singkat proyek 2. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/300x200" alt="Proyek 3">
-          <h3>Proyek 3</h3>
-          <p>Deskripsi singkat proyek 3. Menceritakan tentang apa yang dilakukan dalam proyek ini.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Kontak Saya</h2>
-      <p>Jika Anda tertarik bekerja sama atau ingin mendiskusikan proyek, jangan ragu untuk menghubungi saya melalui email atau media sosial berikut:</p>
-      <ul>
-        <li>Email: <a href="mailto:email@contoh.com">Bangkomar232@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank">linkedin.com/in/username</a></li>
-        <li>GitHub: <a href="https://github.com" target="_blank">github.com/kmrcellnet</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Portofolio Saya | Semua Hak Dilindungi</p>
-  </footer>
-</body>
-</html>
+        width:
