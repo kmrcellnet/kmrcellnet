@@ -11,7 +11,7 @@ export DEBIAN_FRONTEND=noninteractive
 # Update and install required packages
 echo -e "${YELLOW}Updating system and installing Apache, PHP, MySQL, phpMyAdmin...${NC}"
 apt update -y && apt upgrade -y
-apt install -y apache2 php mariadb-server phpmyadmin wget unzip expect
+apt install -y apache2 php mariadb-server phpmyadmin wget unzip
 
 # Enable Apache modules (ensure URL rewriting works for WordPress)
 echo -e "${YELLOW}Enabling necessary Apache modules...${NC}"
@@ -39,22 +39,12 @@ cd /var/www/html/
 echo -e "${YELLOW}Downloading WordPress...${NC}"
 wget http://172.16.90.2/unduh/wordpress.zip
 
-# List files in the directory
-echo -e "${YELLOW}Listing files in /var/www/html/...${NC}"
-ls
-
 # Unzip the WordPress package
 echo -e "${YELLOW}Unzipping WordPress...${NC}"
 unzip wordpress.zip
+rm wordpress.zip  # Remove the zip file after extraction
 
-# Move WordPress files to the correct directory
-echo -e "${YELLOW}Moving WordPress files to the correct directory...${NC}"
-#mv wordpress/* .
-
-# Clean up extracted files
-rm -rf wordpress.zip
-
-# Set more secure permissions for WordPress directory
+# Set correct permissions for WordPress directory
 echo -e "${YELLOW}Setting secure permissions for WordPress directory...${NC}"
 chown -R www-data:www-data /var/www/html/
 find /var/www/html/ -type d -exec chmod 755 {} \;
@@ -65,13 +55,13 @@ echo -e "${YELLOW}Enter MySQL root password:${NC}"
 read -s ROOT_PASS
 
 # Prompt for database name, username, and password
-echo -e "${YELLOW}BUAT DATABASE WordPress:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database Name:${NC} \c"
 read DB_NAME
 
-echo -e "${YELLOW}BUAT USER UNTUK WordPress:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database User:${NC} \c"
 read DB_USER
 
-echo -e "${YELLOW}Enter the password for the MySQL WordPress user:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database Password:${NC} \c"
 read -s DB_PASS
 
 # Log in to MySQL and create the database and user
@@ -84,7 +74,14 @@ FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 
 # Generate random authentication keys and salts for WordPress
-
+AUTH_KEY=$(openssl rand -base64 32)
+SECURE_AUTH_KEY=$(openssl rand -base64 32)
+LOGGED_IN_KEY=$(openssl rand -base64 32)
+NONCE_KEY=$(openssl rand -base64 32)
+AUTH_SALT=$(openssl rand -base64 32)
+SECURE_AUTH_SALT=$(openssl rand -base64 32)
+LOGGED_IN_SALT=$(openssl rand -base64 32)
+NONCE_SALT=$(openssl rand -base64 32)
 
 # Create wp-config.php file automatically
 echo -e "${YELLOW}Creating wp-config.php file...${NC}"
@@ -102,7 +99,7 @@ cat <<EOL > /var/www/html/wp-config.php
  * @package WordPress
  */
 
-// ** MySQL settings - You can get these from your web host ** //
+// ** MySQL settings ** //
 define( 'DB_NAME', '$DB_NAME' );
 define( 'DB_USER', '$DB_USER' );
 define( 'DB_PASSWORD', '$DB_PASS' );
@@ -134,16 +131,10 @@ if ( !defined('ABSPATH') )
 require_once(ABSPATH . 'wp-settings.php');
 EOL
 
-# Display completion message
-echo -e "${YELLOW}Database and user created successfully. wp-config.php file generated.${NC}"
-
 # Restart Apache to apply changes
 echo -e "${YELLOW}Restarting Apache...${NC}"
 systemctl restart apache2
 
-# Display instructions for next steps
-echo -e "${YELLOW}You can now access WordPress by visiting http://<your-server-ip>/ in your browser.${NC}"
-echo -e "${YELLOW}Installation complete!${NC}"
-echo "///////////////////////////////////////////////////////////"
+# Display completion message
+echo -e "${YELLOW}WordPress installed successfully. You can now access it at http://<your-server-ip>/ in your browser.${NC}"
 echo -e "${GREEN} Script Created BY @Bangkomar232@gmail.com ${NC}"
-echo "///////////////////////////////////////////////////////////"
