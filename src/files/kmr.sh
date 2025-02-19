@@ -41,13 +41,13 @@ echo -e "${YELLOW}Enter MySQL root password:${NC}"
 read -s ROOT_PASS
 
 # Prompt for database name, username, and password
-echo -e "${YELLOW}Enter WordPress Database Name:${NC} \c"
+echo -e "${GREEN}Enter WordPress Database Name:${NC} \c"
 read DB_NAME
 
-echo -e "${YELLOW}Enter WordPress Database User:${NC} \c"
+echo -e "${GREEN}Enter WordPress Database User:${NC} \c"
 read DB_USER
 
-echo -e "${YELLOW}Enter WordPress Database Password:${NC} \c"
+echo -e "${GREEN}Enter WordPress Database Password:${NC} \c"
 read -s DB_PASS
 
 # Log in to MySQL and create the database and user
@@ -67,9 +67,9 @@ echo -e "${YELLOW}Database and user created successfully. You can now configure 
 
 # Display instructions for next steps
 echo -e "${YELLOW}Remember to configure your wp-config.php with the database details.${NC}"
-echo -e "${YELLOW}Installation complete! You can now access phpMyAdmin at http://$SERVER_IP/phpmyadmin.${NC}"
-echo -e "${YELLOW}You can also access WordPress at http://$SERVER_IP/wordpress.${NC}"
-echo -e "${GREEN}------------------------////////////=\\\\\\\\\\\/-------------------------${NC}"
+echo -e "${GREEN}Installation complete! You can now access phpMyAdmin at http://$SERVER_IP/phpmyadmin.${NC}"
+echo -e "${GREEN}You can also access WordPress at http://$SERVER_IP/wordpress.${NC}"
+echo -e "${GREEN}--------------------////////////=\\\\\\\\\\\----------------------${NC}"
 echo -e "${GREEN}Script by Bangkomar232@gmail.com.${NC}"
 echo -e "${GREEN}@nkmrx_18${NC}"
-echo -e "${GREEN}------------------------////////////=\\\\\\\\\\\/-------------------------${NC}"
+echo -e "${GREEN}--------------------////////////=\\\\\\\\\\\-------------------------${NC}"
