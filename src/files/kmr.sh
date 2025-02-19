@@ -2,6 +2,7 @@
 
 # Define color for yellow
 YELLOW='\033[1;33m'
+GREEN='\033[32m'
 NC='\033[0m' # No Color
 
 # Set DEBIAN_FRONTEND to noninteractive to avoid GUI prompts during installation
@@ -58,9 +59,17 @@ GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 
+# Get the server IP address
+SERVER_IP=$(hostname -I | awk '{print $1}')
+
 # Display completion message
 echo -e "${YELLOW}Database and user created successfully. You can now configure WordPress.${NC}"
 
 # Display instructions for next steps
 echo -e "${YELLOW}Remember to configure your wp-config.php with the database details.${NC}"
-echo -e "${YELLOW}Installation complete! You can now access phpMyAdmin at http://<your-server-ip>/phpmyadmin.${NC}"
+echo -e "${YELLOW}Installation complete! You can now access phpMyAdmin at http://$SERVER_IP/phpmyadmin.${NC}"
+echo -e "${YELLOW}You can also access WordPress at http://$SERVER_IP/wordpress.${NC}"
+echo -e "${GREEN}------------------------////////////=\\\\\\\\\\\/-------------------------${NC}"
+echo -e "${GREEN}Script by Bangkomar232@gmail.com.${NC}"
+echo -e "${GREEN}@nkmrx_18${NC}"
+echo -e "${GREEN}------------------------////////////=\\\\\\\\\\\/-------------------------${NC}"
