@@ -12,16 +12,20 @@ echo -e "${YELLOW}Updating system and installing Apache, PHP, MySQL, phpMyAdmin.
 apt update -y
 apt install -y apache2 php mariadb-server phpmyadmin wget unzip
 
+# Create symbolic link for phpMyAdmin
+echo -e "${YELLOW}Creating symbolic link for phpMyAdmin...${NC}"
+ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+
+# Restart Apache to apply the changes
+echo -e "${YELLOW}Restarting Apache...${NC}"
+systemctl restart apache2
+
 # Navigate to the web directory
 cd /var/www/html/
 
 # Download WordPress
 echo -e "${YELLOW}Downloading WordPress...${NC}"
 wget http://172.16.90.2/unduh/wordpress.zip
-
-# List files in the directory
-echo -e "${YELLOW}Listing files in /var/www/html/...${NC}"
-ls
 
 # Unzip the WordPress package
 echo -e "${YELLOW}Unzipping WordPress...${NC}"
@@ -36,18 +40,14 @@ echo -e "${YELLOW}Enter MySQL root password:${NC}"
 read -s ROOT_PASS
 
 # Prompt for database name, username, and password
-echo -e "${YELLOW}BUAT DATABASE WordPress:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database Name:${NC} \c"
 read DB_NAME
 
-echo -e "${YELLOW}BUAT USER UNTUK WordPress:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database User:${NC} \c"
 read DB_USER
 
-echo -e "${YELLOW}Enter the password for the MySQL WordPress user:${NC} \c"
+echo -e "${YELLOW}Enter WordPress Database Password:${NC} \c"
 read -s DB_PASS
-
-# Run mysql_secure_installation
-echo -e "${YELLOW}Running mysql_secure_installation...${NC}"
-mysql_secure_installation
 
 # Log in to MySQL and create the database and user
 echo -e "${YELLOW}Creating MySQL database and user...${NC}"
@@ -63,4 +63,4 @@ echo -e "${YELLOW}Database and user created successfully. You can now configure 
 
 # Display instructions for next steps
 echo -e "${YELLOW}Remember to configure your wp-config.php with the database details.${NC}"
-echo -e "${YELLOW}Installation complete!${NC}"
+echo -e "${YELLOW}Installation complete! You can now access phpMyAdmin at http://<your-server-ip>/phpmyadmin.${NC}"
