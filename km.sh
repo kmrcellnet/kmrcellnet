@@ -59,6 +59,12 @@ GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 
+# Check if MySQL commands were successful
+if [ $? -ne 0 ]; then
+    echo -e "${YELLOW}Error: Failed to create MySQL database or user. Please check your credentials or syntax.${NC}"
+    exit 1
+fi
+
 # Get the server IP address
 SERVER_IP=$(hostname -I | awk '{print $1}')
 
@@ -80,6 +86,12 @@ sed -i "s/database_name_here/$DB_NAME/" $WP_CONFIG_PATH
 sed -i "s/username_here/$DB_USER/" $WP_CONFIG_PATH
 sed -i "s/password_here/$DB_PASS/" $WP_CONFIG_PATH
 sed -i "s/localhost/$SERVER_IP/" $WP_CONFIG_PATH
+
+# Check if wp-config.php configuration was successful
+if [ $? -ne 0 ]; then
+    echo -e "${YELLOW}Error: Failed to configure wp-config.php. Please check the script for errors.${NC}"
+    exit 1
+fi
 
 # Display instructions for next steps
 echo -e "${YELLOW}WordPress is now configured. You can access it via the server IP.${NC}"
